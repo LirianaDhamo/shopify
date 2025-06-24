@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 48px 100px 0px 100px; /* Top Right Bottom Left */
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  gap: 1.5rem;
+}
+
+/* Logo + Shop button grouped */
+.logo-shop {
+  display: flex;
+  gap: 10px; 
+}
+
+
+.logo img {
+  height: 60px;
+}
+
+/* Shop button */
+#Shop {
+  background-color: #55AB25;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#Shop:hover {
+  background-color: #4ad9f9;
+}
+
+/* Navigation menu */
+.nav-menu {
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  margin: 0 2rem;
+  gap: 15px;
+}
+
+.nav-menu a {
+  font-family: 'Josefin Sans', sans-serif;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-menu a:hover {
+  color: #f9844a;
+}
+
+/* Icon buttons */
+#nav-icons {
+  background: none;
+  border: none;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+#nav-icons i {
+  color: #55AB25;
+  transition: color 0.3s ease;
+}
+
+#nav-icons:hover i {
+  color: #f9844a;
+}
+
+/* Optional: Badge styling for cart-item, search, user */
+.cart-item, .user, .search {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 50%;
+  display: none; /* Show only if needed */
+}
