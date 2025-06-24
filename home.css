@@ -6,10 +6,10 @@
 
 body {
   max-width: 1512px;
-  height: 155px;  /* maximum width of the page */
-  margin: 0 auto;     /* center it horizontally */
-  padding: 0 20px;    /* optional horizontal padding */
-  font-family: Arial, sans-serif; /* keep your font */
+  height: 155px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
 }
 
 header {
@@ -42,8 +42,8 @@ header {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  padding: 10px 20px;         /* Add padding here too */
-  border-radius: 20px;        /* Add border-radius here too */
+  padding: 10px 20px;
+  border-radius: 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
 }
@@ -51,7 +51,6 @@ header {
 .nav-menu a:hover {
   background-color: #55AB25;
   color: white;
-  /* No need to add padding or border-radius here again */
   font-weight: bold;
 }
 
@@ -74,7 +73,6 @@ header {
   color: #f9844a;
 }
 
-/* Optional: Badge styling for cart-item, search, user */
 .cart-item, .user, .search {
   position: absolute;
   top: -6px;
@@ -84,5 +82,5 @@ header {
   font-size: 10px;
   padding: 2px 5px;
   border-radius: 50%;
-  display: none; /* Show only if needed */
+  display: none;
 }
