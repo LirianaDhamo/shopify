@@ -5,20 +5,21 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  max-width: 1512px;
+  height: 155px;  /* maximum width of the page */
+  margin: 0 auto;     /* center it horizontally */
+  padding: 0 20px;    /* optional horizontal padding */
+  font-family: Arial, sans-serif; /* keep your font */
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 48px 100px 0px 100px; /* Top Right Bottom Left */
+  padding: 48px 100px 0px 100px;
   background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  gap: 1.5rem;
 }
 
-/* Logo + Shop button grouped */
 .logo-shop {
   display: flex;
   gap: 10px; 
@@ -28,29 +29,11 @@ header {
 .logo img {
   height: 60px;
 }
-
-/* Shop button */
-#Shop {
-  background-color: #55AB25;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#Shop:hover {
-  background-color: #4ad9f9;
-}
-
-/* Navigation menu */
 .nav-menu {
   display: flex;
   justify-content: space-evenly;
   flex-grow: 1;
-  margin: 0 2rem;
+  margin: 0 32px;
   gap: 15px;
 }
 
@@ -59,10 +42,17 @@ header {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  transition: color 0.3s ease;
+  padding: 10px 20px;         /* Add padding here too */
+  border-radius: 20px;        /* Add border-radius here too */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
 }
+
 .nav-menu a:hover {
-  color: #f9844a;
+  background-color: #55AB25;
+  color: white;
+  /* No need to add padding or border-radius here again */
+  font-weight: bold;
 }
 
 /* Icon buttons */
