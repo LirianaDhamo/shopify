@@ -16,7 +16,8 @@ let intervalId = null;
 const images = [
   'images/heroImg.jpeg',
   'images/slide2.jpg',
-  'images/slide3.webp'
+  'images/slide3.webp',
+  'images/slide4.jpg',
 ];
 
 const heroBanner = document.querySelector('.hero-banner');
@@ -39,7 +40,6 @@ function pauseCarousel() {
   icon.className = 'ri-play-line';
 }
 
-// Toggle on click
 toggleBtn.addEventListener('click', () => {
   if (intervalId) {
     pauseCarousel();
@@ -48,5 +48,15 @@ toggleBtn.addEventListener('click', () => {
   }
 });
 
-// Start on page load
 startCarousel();
+
+//scroll buttons
+document.querySelectorAll('.weight-loss-button').forEach(button => {
+  button.addEventListener('click', () => {
+    document.getElementById('cart-wrapper').scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+document.querySelector('.get-started-button').addEventListener('click', () => {
+  document.getElementById('hero-banner').scrollIntoView({ behavior: 'smooth' });
+});

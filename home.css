@@ -6,7 +6,6 @@
 
 body {
   max-width: 1512px;
-  height: 155px;
   margin: 0 auto;
   padding: 0 0px;
   font-family: 'Jost', sans-serif;
@@ -15,6 +14,7 @@ body {
 header {
   position: relative;
   display: flex;
+  height: 120px;
   align-items: center;
   justify-content: space-between;
   padding: 48px 100px 0px 100px;
@@ -37,8 +37,10 @@ header {
 
 
 .logo img {
-  height: 60px;
+  height: 80px;
+  padding-bottom: 25px;
 }
+
 .nav-menu {
   display: flex;
   justify-content: space-evenly;
@@ -107,7 +109,7 @@ header {
   justify-content: space-between;
   align-items: flex-end;
   padding: 32px;
-  min-height: 600px;
+  min-height: 700px;
   flex-wrap: wrap;
   z-index: 1;
   background: url('images/heroImg.jpeg') no-repeat center/cover;
@@ -262,11 +264,13 @@ header {
   background-color: white;
 }
 
-/*third part*/
+/*weight loss*/
 .weight-loss {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  width: 1510px;
+  height: 151px;
+  gap: 3px;
   padding: 50px 100px;
   max-width: 1512px;
   margin: 0 auto;
@@ -319,8 +323,9 @@ header {
 .cart-card {
   background-color: #F1E8E6;
   border-radius: 20px;
+  width: 1303px;
+  height: 675px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  padding: 20px;
   max-width: 1352px;
   height: 600px;
   margin: 0 auto;
@@ -331,7 +336,7 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 10px;
 }
 
 .get-started {
@@ -341,17 +346,19 @@ header {
   text-align: center;  
   gap: 10px;
   padding-top: 90px;  
-  padding-left: 70px;  
+  padding-left: 20px;  
 }
 
 .get-started-p {
-  font-family: 'Helvetica';
-  font-weight: 10; /* lightest supported */
+  width: 500px;
+  height: 224px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 300;
   font-size: 60px;
-  color: #55AB25;
+  color: #238014;
   margin-bottom: 16px;
-  line-height: 1.2;
-  letter-spacing: -0.5px; /* helps text look slimmer */
+  line-height: 100%;
+  letter-spacing: 0%; /* helps text look slimmer */
 }
 
 .get-started-p2 {
@@ -369,96 +376,207 @@ header {
   color: white;
   border: none;
   border-radius: 25px;
-  padding: 12px 50px;
+  padding: 15px 50px;
   font-size: 16px;
   cursor: pointer;
+}
+.get-started-button:hover {
+  background-color: #238014;
 }
 
 /*images*/
 .cart-images {
-  flex: 1;
   display: flex;
   justify-content: center;
-  gap: 0;
-  flex-wrap: nowrap;
   position: relative;
+  padding-top: 90px;
+  padding-right: 90px;
+  width: 700px;
+  height: 600px;
+  max-width: 100%; /* ensures images scale inside card */
+  overflow: hidden; /* prevents layout break */
 }
 
 .cart-images img {
-  width: 286.85px; /* bigger */
-  height: auto;
   border-radius: 8px;
   position: relative;
-  margin-left: -110px;
   transition: transform 0.3s ease;
 }
 
-.cart-images img:nth-child(1) {
-  margin-left: 0;
+.cart-images .img1 {
+  width: 250.69px;
+  height: 430px;
   z-index: 10;
-  top: 0;
+  top: -20px;
   transform: scale(0.9);
+  position: relative;
 }
 
-.cart-images img:nth-child(2) {
+.cart-images .img2 {
+  width: 250.69px;
+  height: 430px;
   z-index: 30;
   top: 50px;
-  margin-left: -70px;
   transform: scale(1);
+  margin-left: -70px;
+  position: relative;
 }
 
-.cart-images img:nth-child(3) {
+.cart-images .img3 {
+  width: 250.69px;
+  height: 450px;
   z-index: 10;
-  top: 0;
+  top: -20px;
   transform: scale(0.9);
+  position: relative;
+  margin-left: -100px;
 }
 
-/* Container styling */
+/*Welcome Pack*/
 .welcome-pack {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
-  padding: 20px;
-}
-
-/* Card styling */
-.welcome-pack-card {
-  display: flex;
-  flex-direction: column;
-  justify-self: space-around;
+  width: 1516px;
+  height: 398px;
+  gap: 30px;
+  padding: 40px;
   background-color: #fff;
-  padding: 24px;
-  max-width: 300px;
+  position: relative;
 }
 
-/* h1: Miller Display */
-.welcome-pack-card h1 {
-  font-family: "Miller Display", serif;
-  font-weight: 400;
-  font-size: 21.89px;
-  line-height: 1.3;
-  margin-bottom: 12px;
+.welcome-pack-card {
+  width: 241.69px;
+  height: 331.89px;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+
+/*icons welcome pack*/
+.welcome-pack-card .icon1 {
+  width: 85.82px;
+  height: 89.32px;
   color: #238014;
 }
 
-/* h2: Jost */
-.welcome-pack-card h2 {
-  font-family: "Jost", sans-serif;
-  font-weight: 400;
-  font-size: 17.51px;
-  line-height: 1.5;
-  color: #55AB26;
+.welcome-pack-card .icon2 {
+  width: 84.94px;
+  height: 84.07px;
+  color: #238014;
 }
 
-/* Optional: placeholder for icons */
-.welcome-pack-card i {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  background-color: #ddd;
-  border-radius: 50%;
-  margin-bottom: 16px;
+.welcome-pack-card .icon3 {
+  width: 96.33px;
+  height: 93.7px;
+  color: #238014;
+}
+
+.welcome-pack-card .icon4 {
+  width: 79.69px;
+  height: 93.7px;
+  color: #238014;
+}
+
+.welcome-pack-card h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 21.89px;
+  color: #238014;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.welcome-pack-card h2 {
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 17.51px;
+  color: #55AB26;
+  line-height: 21.89px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin: 0;
+}
+
+.testimonials {
+  background-color: #D5E7B9;
+  width: 1286px;
+  height: 633px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Jost', sans-serif;
+}
+
+.testimonials-card {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.testimonials-text {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimonials-text p {
+  font-family: 'Miller Display', serif;
+  color: #238014;
+  font-weight: 300;
+  font-size: 62.05px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  width: 507.28px;
+  height: 353.7px;
+  margin: 0 0 20px 0;
+}
+
+.testimonials-text h2 {
+  font-family: 'Jost', sans-serif;
+  color: #409E31;
+  font-weight: 400;
+  font-size: 28.82px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  width: 363px;
+  height: 48px;
+  margin: 0 0 20px 0;
+}
+
+.testimonials-button {
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 60px;
+  letter-spacing: 3%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px 30px;
+  border-radius: 30px;
+  background-color: #55AB25;
+  color: white;
+  cursor: pointer;
+  max-width: fit-content;
+}
+
+.testimonials-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*phone*/
