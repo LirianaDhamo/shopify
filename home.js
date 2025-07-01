@@ -66,6 +66,10 @@ document.querySelector('.get-started-button').addEventListener('click', () => {
   document.getElementById('hero-banner').scrollIntoView({ behavior: 'smooth' });
 });
 
+document.querySelector('.testimonials-button').addEventListener('click', () => {
+  document.getElementById('hero-banner').scrollIntoView({ behavior: 'smooth' });
+});
+
 //testimonialls swiper
 const testimonials = [
     {

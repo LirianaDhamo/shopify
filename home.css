@@ -536,7 +536,7 @@ header {
 .testimonials-text p {
   font-family: 'Miller Display', serif;
   color: #238014;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 62.05px;
   line-height: 100%;
   letter-spacing: 0%;
@@ -623,7 +623,7 @@ header {
   }
 
   .logo img {
-    height: 30px;
+    height: 60px;
   }
 
   .nav-menu {
