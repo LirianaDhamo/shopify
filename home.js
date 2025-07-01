@@ -13,6 +13,7 @@ const icon = toggleBtn.querySelector('i');
 
 let currentIndex = 0;
 let intervalId = null;
+
 const images = [
   'images/heroImg.jpeg',
   'images/slide2.jpg',
@@ -20,11 +21,17 @@ const images = [
   'images/slide4.jpg',
 ];
 
-const heroBanner = document.querySelector('.hero-banner');
+const heroBanner = document.getElementById('hero-banner');
 
 function updateHeroImage() {
   currentIndex = (currentIndex + 1) % images.length;
   heroBanner.style.backgroundImage = `url('${images[currentIndex]}')`;
+
+  // Optionally update indicators if you are using them
+  const indicators = document.querySelectorAll('.carousel-indicators .line');
+  indicators.forEach((dot, i) => {
+    dot.classList.toggle('active', i === currentIndex);
+  });
 }
 
 function startCarousel() {
@@ -47,8 +54,6 @@ toggleBtn.addEventListener('click', () => {
     startCarousel();
   }
 });
-
-startCarousel();
 
 //scroll buttons
 document.querySelectorAll('.weight-loss-button').forEach(button => {

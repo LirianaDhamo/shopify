@@ -109,7 +109,7 @@ header {
   justify-content: space-between;
   align-items: flex-end;
   padding: 32px;
-  min-height: 700px;
+  height: 690px;
   flex-wrap: wrap;
   z-index: 1;
   background: url('images/heroImg.jpeg') no-repeat center/cover;
@@ -132,21 +132,24 @@ header {
   flex-wrap: wrap;
 }
 
-.description {
+.description{
   max-width: 300px;
   margin-left: 63px;
   height: 20px;
+  margin-bottom: 10px;
 }
 
 .description h1 {
   font-size: 70px;
-  margin: 0;
-  font-weight: 500;
+  margin: -50px 0 0 0; /* move it 20px up */
+  font-weight: 300;
+  line-height: 1;
 }
 
 .description h2 {
   font-size: 30px;
-  margin-top: 16px;
+  margin-top: 36px;       /* remove default space */
+  padding-bottom: 30px;
   font-weight: 5;
 }
 
@@ -207,6 +210,7 @@ header {
   width: 100%;
   margin-top: 32px;
   margin-left: 63px;
+  margin-bottom: 20px;
 }
 
 .start-button button {
@@ -446,7 +450,7 @@ header {
 }
 
 .welcome-pack-card {
-  width: 241.69px;
+  width: 255.69px;
   height: 331.89px;
   background-color: white;
   text-align: center;
