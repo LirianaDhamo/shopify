@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
@@ -178,20 +179,25 @@
     <div class="testimonials"> 
         <div class="testimonials-card">
             <div class="testimonials-text">
-                <p> "The energy I<br>started to have was<br>unbelievable."</p>
-                <h2>_Stephanie S.</h2>
-                <button class="testimonials-button">LEARN STEPHANIE'S STORY<button>
-                <i class="ri-arrow-left-line"></i>
-                <i class="ri-arrow-right-line"></i>
+            
+                <p id="testimonial-quote">"The energy I<br>started to have was<br>unbelievable."</p>
+            <h2 id="testimonial-name">_Stephanie S.</h2>
+            
+            <button class="testimonials-button" id="testimonial-button">LEARN STEPHANIE'S STORY</button>
+            
+            <div class="arrows-icons">
+                <i class="ri-arrow-left-line" id="prev"></i>
+                <i class="ri-arrow-right-line" id="next"></i>
             </div>
+        </div>
+            
             <div class="testimonials-image">
-                <img src="images/testimonials1.jpg" alt="Testimonial 1">
+            <img src="images/testimonials1.jpg" alt="Testimonial 1">
             </div>
-
         </div>
     </div>
-    
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="home.js"></script>
 </body>
 </html>

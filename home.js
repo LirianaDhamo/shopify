@@ -60,3 +60,43 @@ document.querySelectorAll('.weight-loss-button').forEach(button => {
 document.querySelector('.get-started-button').addEventListener('click', () => {
   document.getElementById('hero-banner').scrollIntoView({ behavior: 'smooth' });
 });
+
+//testimonialls swiper
+const testimonials = [
+    {
+      quote: `"The energy I<br>started to have was<br>unbelievable."`,
+      name: "_Stephanie S."
+    },
+    {
+      quote: `"I finally feel like<br>I’m myself again!"`,
+      name: "_James K."
+    },
+    {
+      quote: `"This changed my<br>entire daily routine."`,
+      name: "_Laura M."
+    }
+  ];
+
+  let index = 0;
+
+  const quoteEl = document.getElementById("testimonial-quote");
+  const nameEl = document.getElementById("testimonial-name");
+  const buttonEl = document.getElementById("testimonial-button");
+
+  function updateTestimonial(i) {
+    quoteEl.innerHTML = testimonials[i].quote;
+    nameEl.innerHTML = testimonials[i].name;
+
+    const nameOnly = testimonials[i].name.replace(/^_/, "").split(" ")[0].toUpperCase();
+    buttonEl.textContent = `LEARN ${nameOnly}'S STORY`;
+  }
+
+  document.getElementById("prev").addEventListener("click", () => {
+    index = (index - 1 + testimonials.length) % testimonials.length;
+    updateTestimonial(index);
+  });
+
+  document.getElementById("next").addEventListener("click", () => {
+    index = (index + 1) % testimonials.length;
+    updateTestimonial(index);
+  });
