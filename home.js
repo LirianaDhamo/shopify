@@ -70,7 +70,7 @@ document.querySelector('.testimonials-button').addEventListener('click', () => {
   document.getElementById('hero-banner').scrollIntoView({ behavior: 'smooth' });
 });
 
-//testimonialls swiper
+//testimonialls
 const testimonials = [
     {
       quote: `"The energy I<br>started to have was<br>unbelievable."`,
@@ -109,3 +109,22 @@ const testimonials = [
     index = (index + 1) % testimonials.length;
     updateTestimonial(index);
   });
+
+  //discover
+  const discoverSwiper = new Swiper('.swiper', {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  speed: 600,
+  freeMode: true,
+  breakpoints: {
+    320: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
+    1400: { slidesPerView: 4 }
+  }
+});

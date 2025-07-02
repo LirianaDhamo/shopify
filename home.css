@@ -458,7 +458,6 @@ header {
   position: relative;
 }
 
-/*icons welcome pack*/
 .welcome-pack-card .icon1 {
   width: 85.82px;
   height: 89.32px;
@@ -607,6 +606,210 @@ header {
   width: 769px;
   height: 633px;
   object-fit: cover;
+}
+
+/*discover*/
+.discover {
+  max-width: 1512px;
+  margin: 0 auto;
+  padding: 40px 0;
+  background: #F1E8E6;
+  border-radius: 20px;
+  /* remove fixed height so container grows with content */
+  min-height: 700px;
+}
+
+.discover-line {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 48px;
+  color: #238014;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.swiper {
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.swiper-wrapper {
+  display: flex;
+  gap: 10px; /* gap between cards */
+  padding-left: 100px;
+  /* remove fixed height, let it grow */
+  height: auto;
+}
+
+/* This is your visible card container */
+.card-slide {
+  width: 390px;
+  height: 600px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Reset swiper-slide to fill .card-slide fully */
+.swiper-slide {
+  width: 100% !important;
+  height: 100% !important;
+  box-shadow: none;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  position: static;
+  display: block;
+}
+
+.img1 {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 14px 14px 0 0;
+  display: block; /* removes inline gap */
+}
+
+.plus-sign {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 50px;
+  height: 50px;
+  background: #55AB26;
+  color: white;
+  border-radius: 30%;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.discover-text {
+  background: #55AB26;
+  height: 150px;
+  color: white;
+  padding: 10px;
+}
+
+.discover-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.discover-text p {
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #238014;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*global-leader*/
+.global-leader {
+  text-align: center;
+  max-width: 1512px;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  font-family: 'Jost', sans-serif;
+}
+
+.global-leader h1 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 55px;
+  font-weight: 200;
+  margin-bottom: 40px;
+  color: #238014;
+}
+
+.content {
+  max-width: 1512px;
+}
+
+.circles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.circleT {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #55AB25;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.circleT h1 {
+  font-size: 60px;
+  font-weight: bold;
+  color: #55AB25;
+  margin: 0;
+}
+
+.circleT p {
+  font-size: 25px;
+  color: #55AB25;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+.content > p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #444;
+  margin-top: 20px;
+}
+
+.global-button {
+  margin-top: 30px;
+  background-color: #55AB25;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.global-button i {
+  margin-left: 8px;
+}
+
+.global-button:hover {
+  background-color: #44991e;
 }
 
 /*phone*/
