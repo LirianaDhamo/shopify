@@ -128,3 +128,25 @@ const testimonials = [
     1400: { slidesPerView: 4 }
   }
 });
+
+//Doctor
+  const cards = document.querySelectorAll('.doctor-card');
+  const nextBtn = document.querySelector('.arrow-right');
+  const prevBtn = document.querySelector('.arrow-left');
+  let current = 0;
+
+  function showCard(index) {
+    cards.forEach((card, i) => {
+      card.classList.toggle('active', i === index);
+    });
+  }
+
+  nextBtn.addEventListener('click', () => {
+    current = (current + 1) % cards.length;
+    showCard(current);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    current = (current - 1 + cards.length) % cards.length;
+    showCard(current);
+  });

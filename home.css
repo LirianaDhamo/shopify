@@ -730,7 +730,7 @@ header {
   text-align: center;
   max-width: 1512px;
   padding: 60px 20px;
-  background-color: #f9f9f9;
+  background-color: white;
   font-family: 'Jost', sans-serif;
 }
 
@@ -784,7 +784,7 @@ header {
 }
 
 .content > p {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 300;
   line-height: 1.2;
   color: #444;
@@ -792,11 +792,13 @@ header {
 }
 
 .global-button {
+  width: 400px;
   margin-top: 30px;
   background-color: #55AB25;
   color: white;
   border: none;
   padding: 16px 32px;
+  margin-left: 540px;
   font-size: 20px;
   border-radius: 10px;
   cursor: pointer;
@@ -810,6 +812,300 @@ header {
 
 .global-button:hover {
   background-color: #44991e;
+}
+
+/*university*/
+.university {
+  width: 1512px;
+  height: 250px;
+  background-color: #F9F175;
+  padding: 60px 0px;
+  text-align: center;
+}
+
+.university p {
+  height: 54px;
+  font-size: 40px;
+  font-weight: 300;
+  color: #238014;
+  margin-bottom: 30px;
+  font-family: 'Jost', sans-serif;
+}
+
+.university .logo {
+  width: 160px;
+  height: auto;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+/*Doctor*/
+.Doctor {
+  width: 1512px;
+  background-color: white;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center;
+  font-family: 'Jost', sans-serif;
+}
+
+.doctor-carousel {
+  position: relative;
+  max-width: 1250px;
+  width: 100%;
+}
+
+/* Hide all slides by default */
+.doctor-card {
+  display: none;
+  background-color: #F1E8E6;
+  height: 490px;
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Show only the active slide */
+.doctor-card.active {
+  display: flex;
+}
+
+.img1 {
+  width: 450px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px 0px 20px 0px;
+}
+
+.doctor-card > .content {
+  padding: 30px;
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding-right: 100px;
+  justify-content: space-between;
+}
+
+.thonjzad {
+  width: 30px;
+  height: auto;
+  vertical-align: middle;
+  position: relative;
+}
+
+.thonjzad-top {
+  top: -10px;
+}
+
+.thonjzad-bottom {
+  top: 10px;
+}
+
+.doctor-card p {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  font-weight: 300;
+  color: #238014;
+  margin: 0;
+  line-height: 1.4;
+  letter-spacing: 0%;
+  position: relative;
+}
+
+.signature {
+  color: #238014;
+  width: 120px;
+  margin-top: 25px;
+}
+
+.doctors-names {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+  margin-top: 60px;
+}
+
+.doctors-names h2 {
+  font-family: 'Jost', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #238014;
+  margin: 0;
+  line-height: 100%;
+  letter-spacing: 2%;
+}
+
+.doctors-names h3 {
+  font-family: 'Jost', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #55AB26;
+  margin: 0;
+}
+
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  bottom: 20px;
+  border: 2px solid #55AB25;
+  border-radius: 50%;
+  font-size: 40px;
+  color: #55AB25;
+  cursor: pointer;
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.arrow-left {
+  left: 50px;
+}
+
+.arrow-right {
+  right: 50px;
+}
+
+.doctor-quote {
+  margin-top: 40px;
+  text-align: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 45px;
+  font-weight: 300;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #238014;
+  letter-spacing: 1px;
+}
+
+/*Shake-Recipe*/
+.shake-recipes {
+  max-width: 1512px;
+  height: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+  background-color: #F1E8E6;
+  text-align: center;
+}
+
+.shake-title h1 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 32px;
+  color: #238014;
+  margin-bottom: 30px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.shake-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.shake-card {
+  background-color: #55AB26;
+  width: 400px;
+  height: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.plus-sign1 {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding-top: 15px;
+  background-color: #55AB26;
+  color: white;
+  font-weight: 200;
+  font-size:50px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  z-index: 10;
+}
+
+.shake-card img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.shake-text {
+  padding: 15px 10px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.shake-text p {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 25px;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+  .shake-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shake-card {
+    width: 90%;
+    height: auto;
+  }
+
+  .shake-card img {
+    height: 200px;
+  }
+
+  .shake-card p {
+    height: auto;
+    padding: 15px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 940px) {
+  .shake-wrapper {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .shake-card {
+    width: 90%;
+    padding: 15px;
+  }
+  .shake-card img {
+    height: 140px;
+  }
 }
 
 /*phone*/
