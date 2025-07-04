@@ -111,22 +111,26 @@ const testimonials = [
   });
 
   //discover
-  const discoverSwiper = new Swiper('.swiper', {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  loop: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  speed: 600,
-  freeMode: true,
-  breakpoints: {
-    320: { slidesPerView: 1 },
-    768: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 },
-    1400: { slidesPerView: 4 }
-  }
+    const discoverSwiper = new Swiper('.swiper', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    speed: 600,
+    freeMode: true,
+    breakpoints: {
+      320: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+      1400: { slidesPerView: 4 }
+    }
 });
 
 //Doctor

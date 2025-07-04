@@ -299,7 +299,7 @@ header {
   text-align: left;
 }
 
-.plus-sign {
+.plus-sign2 {
   color: rgb(195, 193, 193);
   font-size: 22px;
   line-height: 1;
@@ -349,8 +349,7 @@ header {
   align-items: center;  
   text-align: center;  
   gap: 10px;
-  padding-top: 90px;  
-  padding-left: 20px;  
+  padding-left: 50px;  
 }
 
 .get-started-p {
@@ -360,7 +359,6 @@ header {
   font-weight: 300;
   font-size: 60px;
   color: #238014;
-  margin-bottom: 16px;
   line-height: 100%;
   letter-spacing: 0%; /* helps text look slimmer */
 }
@@ -556,6 +554,24 @@ header {
   margin: 0 0 20px 0;
 }
 
+.testimonial thonjza-top, .testimonial thonjza-bottom {
+  width: 30px;
+  height: auto;
+  vertical-align: middle;
+  position: relative;
+}
+
+.testimonial.thonjza-top {
+  padding-bottom: 10px;
+  position: relative;
+  top: -10px; /* this lifts it up */
+}
+
+.testimonial.thonjza-bottom {
+  position: relative;
+  top: 10px;
+}
+
 .testimonials-button {
   font-family: 'Jost', sans-serif;
   width: 385px;
@@ -610,120 +626,148 @@ header {
 
 /*discover*/
 .discover {
-  max-width: 1512px;
-  margin: 0 auto;
-  padding: 40px 0;
-  background: #F1E8E6;
+  background-color: #F1E8E6;
+  width: 1512px;
+  height: 1046px;
+  padding: 50px 20px;
   border-radius: 20px;
-  /* remove fixed height so container grows with content */
-  min-height: 700px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .discover-line {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 48px;
+  font-family: 'Playfair Display', serif;
+  width: 1341.21px;
+  height: 71px;
+  font-size: 60px;
+  font-weight: 300;
   color: #238014;
-  display: flex;
-  justify-content: center;
+  margin-bottom: 30px;
+  letter-spacing: 0%;
+  line-height: 100%;
   text-align: center;
-  margin-bottom: 40px;
-  font-weight: 600;
 }
 
 .swiper {
-  padding-bottom: 80px;
   position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .swiper-wrapper {
   display: flex;
-  gap: 10px; /* gap between cards */
-  padding-left: 100px;
-  /* remove fixed height, let it grow */
-  height: auto;
+  align-items: stretch;
+  gap: 20px;
+  padding-bottom: 60px;
+  padding-left: 100px !important;
 }
 
-/* This is your visible card container */
 .card-slide {
-  width: 390px;
-  height: 600px;
-  background: white;
+  flex: 0 0 auto;
+  width: 350px;
+}
+
+.swiper-slide {
+  background-color: #55AB26;
   border-radius: 10px;
-  overflow: hidden;
-  position: relative;
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  align-items: center;
+  position: relative;
+  transition: transform 0.3s ease;
 }
 
-/* Reset swiper-slide to fill .card-slide fully */
-.swiper-slide {
-  width: 100% !important;
-  height: 100% !important;
-  box-shadow: none;
-  background: transparent;
-  border-radius: 0;
-  overflow: visible;
-  position: static;
-  display: block;
-}
-
-.img1 {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 14px 14px 0 0;
-  display: block; /* removes inline gap */
+.swiper-slide:hover {
+  transform: translateY(-10px);
 }
 
 .plus-sign {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 50px;
-  height: 50px;
-  background: #55AB26;
+  top: 20px;
+  left: 20px;
+  background-color: #55AB26;
   color: white;
-  border-radius: 30%;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
   font-weight: bold;
-  cursor: pointer;
 }
 
-.discover-text {
-  background: #55AB26;
-  height: 150px;
-  color: white;
-  padding: 10px;
+.swiper-slide img {
+  width: 439px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
 }
 
 .discover-text h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 18px;
-  margin: 0 0 10px;
+  font-size: 24px;
+  color: #2c5f2d;
+  margin-bottom: 10px;
 }
 
 .discover-text p {
-  font-family: 'Jost', sans-serif;
-  font-size: 14px;
-  margin: 0;
-  line-height: 1.4;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: #238014;
+  color: #2c5f2d;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
 }
 
-.swiper-button-prev::after,
-.swiper-button-next::after {
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-pagination {
+  text-align: center;
+  margin-top: 10px;
+  position: relative;
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  width: auto;
+  height: auto;
+  background: none;
   font-size: 20px;
+  color: #999;
+  margin: 0 6px;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.swiper-pagination-bullet::before {
+  content: "_";
+}
+
+.swiper-pagination-bullet-active::before {
+  color: #2c5f2d;
   font-weight: bold;
 }
+/*discover*/
+
+
 
 /*global-leader*/
 .global-leader {
@@ -832,7 +876,7 @@ header {
   font-family: 'Jost', sans-serif;
 }
 
-.university .logo {
+.university .logo1 {
   width: 160px;
   height: auto;
   margin: 0 10px;
@@ -969,7 +1013,9 @@ header {
   color: #55AB25;
   cursor: pointer;
   z-index: 2;
-  margin-bottom: 30px;
+  padding-left: 7px;
+  padding-top: 7px;
+  margin-bottom: 40px;
 }
 
 .arrow-left {
