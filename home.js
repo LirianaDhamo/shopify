@@ -71,26 +71,27 @@ document.querySelector('.testimonials-button').addEventListener('click', () => {
 });
 
 //testimonialls
-const testimonials = [
-  {
-    quote: `<img src="images/thonjza.png" alt="quote-start" class="testimonial thonjza-top">
-            The energy I<br>started to have was<br>unbelievable.
-            <img src="images/thonjza2.png" alt="quote-end" class="testimonial thonjza-bottom">`,
-    name: "_Stephanie S."
-  },
-  {
-    quote: `<img src="images/thonjza.png" alt="quote-start" class="testimonial thonjza-top">
-            I finally feel like<br>I’m myself again!
-            <img src="images/thonjza2.png" alt="quote-end" class="testimonial thonjza-bottom">`,
-    name: "_James K."
-  },
-  {
-    quote: `<img src="images/thonjza.png" alt="quote-start" class="testimonial thonjza-top">
-            This changed my<br>entire daily routine.
-            <img src="images/thonjza2.png" alt="quote-end" class="testimonial thonjza-bottom">`,
-    name: "_Laura M."
-  }
-];
+document.addEventListener("DOMContentLoaded", () => {
+  const testimonials = [
+    {
+      quote: `<img src="images/thonjza.png" alt="quote-start" class="testimonial thonjza-top">
+              The energy I<br>started to have was<br>unbelievable.
+              <img src="images/thonjza2.png" alt="quote-end" class="testimonial thonjza-bottom">`,
+      name: "_Stephanie S."
+    },
+    {
+      quote: `<img src="images/thonjza.png" alt="quote-start" class="testimonial thonjza-top">
+              I finally feel like<br>I’m myself again!
+              <img src="images/thonjza2.png" alt="quote-end" class="testimonial thonjza-bottom">`,
+      name: "_James K."
+    },
+    {
+      quote: `<img src="images/thonjza.png" alt="quote-start" class="testimonial thonjza-top">
+              This changed my<br>entire daily routine.
+              <img src="images/thonjza2.png" alt="quote-end" class="testimonial thonjza-bottom">`,
+      name: "_Laura M."
+    }
+  ];
 
   let index = 0;
 
@@ -106,37 +107,17 @@ const testimonials = [
     buttonEl.textContent = `LEARN ${nameOnly}'S STORY`;
   }
 
-  document.getElementById("doctor-prev").addEventListener("click", () => {
-  index = (index - 1 + testimonials.length) % testimonials.length;
   updateTestimonial(index);
-});
 
-document.getElementById("doctor-next").addEventListener("click", () => {
-  index = (index + 1) % testimonials.length;
-  updateTestimonial(index);
-});
+  document.getElementById("prev").addEventListener("click", () => {
+    index = (index - 1 + testimonials.length) % testimonials.length;
+    updateTestimonial(index);
+  });
 
-  //discover
-    const discoverSwiper = new Swiper('.swiper', {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    speed: 600,
-    freeMode: true,
-    breakpoints: {
-      320: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 },
-      1400: { slidesPerView: 4 }
-    }
+  document.getElementById("next").addEventListener("click", () => {
+    index = (index + 1) % testimonials.length;
+    updateTestimonial(index);
+  });
 });
 
 //Doctor
@@ -160,3 +141,16 @@ prevBtn.addEventListener('click', () => {
   current = (current - 1 + cards.length) % cards.length;
   showCard(current);
 });
+
+//discover
+  const prev = document.getElementById("doctor-prev");
+  const next = document.getElementById("doctor-next");
+  const carousel = document.querySelector(".discover-carousel");
+
+  prev.addEventListener("click", () => {
+    carousel.scrollBy({ left: -320, behavior: "smooth" });
+  });
+
+  next.addEventListener("click", () => {
+    carousel.scrollBy({ left: 320, behavior: "smooth" });
+  });
