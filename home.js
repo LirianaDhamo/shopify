@@ -26,8 +26,7 @@ const heroBanner = document.getElementById('hero-banner');
 function updateHeroImage() {
   currentIndex = (currentIndex + 1) % images.length;
   heroBanner.style.backgroundImage = `url('${images[currentIndex]}')`;
-
-  // Optionally update indicators if you are using them
+  
   const indicators = document.querySelectorAll('.carousel-indicators .line');
   indicators.forEach((dot, i) => {
     dot.classList.toggle('active', i === currentIndex);
@@ -143,14 +142,46 @@ prevBtn.addEventListener('click', () => {
 });
 
 //discover
-  const prev = document.getElementById("doctor-prev");
-  const next = document.getElementById("doctor-next");
-  const carousel = document.querySelector(".discover-carousel");
+  document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector(".discover-carousel");
+    const cards = document.querySelectorAll(".discover-card");
+    const indicators = document.querySelectorAll(".discover-indicators .line");
+    const prev = document.getElementById("discover-prev");
+    const next = document.getElementById("discover-next");
 
-  prev.addEventListener("click", () => {
-    carousel.scrollBy({ left: -320, behavior: "smooth" });
-  });
+    const cardWidth = cards[0].offsetWidth + 20;
+    let currentIndex = 0;
 
-  next.addEventListener("click", () => {
-    carousel.scrollBy({ left: 320, behavior: "smooth" });
+    function updateIndicators(index) {
+      indicators.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+    }
+
+    prev.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        carousel.scrollBy({ left: -cardWidth, behavior: "smooth" });
+        updateIndicators(currentIndex);
+      }
+    });
+
+    next.addEventListener("click", () => {
+      if (currentIndex < cards.length - 1) {
+        currentIndex++;
+        carousel.scrollBy({ left: cardWidth, behavior: "smooth" });
+        updateIndicators(currentIndex);
+      }
+    });
+
+    carousel.addEventListener("scroll", () => {
+      const scrollLeft = carousel.scrollLeft;
+      const index = Math.round(scrollLeft / cardWidth);
+      if (index !== currentIndex) {
+        currentIndex = index;
+        updateIndicators(currentIndex);
+      }
+    });
+
+    updateIndicators(currentIndex);
   });

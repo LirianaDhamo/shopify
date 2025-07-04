@@ -625,7 +625,7 @@ header {
 /*discover*/
 .discover {
   width: 1512px;
-  height: 750px;
+  height: 900px;
   position: relative;
   padding: 40px 20px;
   background-color: #F1E8E6;
@@ -678,8 +678,8 @@ header {
   justify-content: space-between;
   background-color: #55AB25;
   border-radius: 10px;
-  width: 430px;
-  height: 490px;
+  width: 390px;
+  height: 590px;
   overflow: hidden;
   position: relative;
   flex-shrink: 0;
@@ -687,15 +687,14 @@ header {
 }
 
 .discover-card img {
-  height: 70%;
+  height: 450px;
   width: 100%;
-  object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
 .discover-text {
-  height: 30%;
+  height: 140px;
   width: 100%;
   padding: 15px 20px;
   text-align: left;
@@ -725,14 +724,52 @@ header {
   line-height: 1.5;
 }
 
+.discover-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-bottom: 120px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.line {
+  width: 260px;
+  height: 4px;
+  background-color: grey;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.line.active {
+  background-color: white;
+}
+
+.discover-arrows {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  right: 0;
+  height: 0;
+  margin-left: 1300px;
+  pointer-events: none;
+  z-index: 10;
+  transform: translateY(-50%);
+  display: flex;
+  padding: 0 20px;
+}
+
 .discover-arrow {
   pointer-events: auto;
   cursor: pointer;
   width: 60px;
-  flex-direction: row;
   height: 60px;
   border: 2px solid #55AB26;
   border-radius: 50%;
+  margin-right: 10px;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -1067,20 +1104,22 @@ header {
   flex-direction: column;
 }
 
-.plus-sign1 {
+.plus-signSH {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  background-color: #55AB26;
+  width: 60px;
+  height: 60px;
+  top: 20px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
   color: white;
-  font-weight: 50;
-  font-size: 37px;
-  width: 50px;
-  height: 50px;
+  background-color: #55AB26;
   border-radius: 50%;
-  line-height: 50px;
-  text-align: center;
-  z-index: 10;
+  font-weight: 200;
+  padding: 5px;
+  cursor: pointer;
 }
 
 .shake-card img {
