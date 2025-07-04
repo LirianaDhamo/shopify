@@ -72,19 +72,25 @@ document.querySelector('.testimonials-button').addEventListener('click', () => {
 
 //testimonialls
 const testimonials = [
-    {
-      quote: `"The energy I<br>started to have was<br>unbelievable."`,
-      name: "_Stephanie S."
-    },
-    {
-      quote: `"I finally feel like<br>I’m myself again!"`,
-      name: "_James K."
-    },
-    {
-      quote: `"This changed my<br>entire daily routine."`,
-      name: "_Laura M."
-    }
-  ];
+  {
+    quote: `<img src="images/thonjza.png" alt="quote-start" class="testimonial thonjza-top">
+            The energy I<br>started to have was<br>unbelievable.
+            <img src="images/thonjza2.png" alt="quote-end" class="testimonial thonjza-bottom">`,
+    name: "_Stephanie S."
+  },
+  {
+    quote: `<img src="images/thonjza.png" alt="quote-start" class="testimonial thonjza-top">
+            I finally feel like<br>I’m myself again!
+            <img src="images/thonjza2.png" alt="quote-end" class="testimonial thonjza-bottom">`,
+    name: "_James K."
+  },
+  {
+    quote: `<img src="images/thonjza.png" alt="quote-start" class="testimonial thonjza-top">
+            This changed my<br>entire daily routine.
+            <img src="images/thonjza2.png" alt="quote-end" class="testimonial thonjza-bottom">`,
+    name: "_Laura M."
+  }
+];
 
   let index = 0;
 
@@ -100,15 +106,15 @@ const testimonials = [
     buttonEl.textContent = `LEARN ${nameOnly}'S STORY`;
   }
 
-  document.getElementById("prev").addEventListener("click", () => {
-    index = (index - 1 + testimonials.length) % testimonials.length;
-    updateTestimonial(index);
-  });
+  document.getElementById("doctor-prev").addEventListener("click", () => {
+  index = (index - 1 + testimonials.length) % testimonials.length;
+  updateTestimonial(index);
+});
 
-  document.getElementById("next").addEventListener("click", () => {
-    index = (index + 1) % testimonials.length;
-    updateTestimonial(index);
-  });
+document.getElementById("doctor-next").addEventListener("click", () => {
+  index = (index + 1) % testimonials.length;
+  updateTestimonial(index);
+});
 
   //discover
     const discoverSwiper = new Swiper('.swiper', {
