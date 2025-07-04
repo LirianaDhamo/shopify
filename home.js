@@ -141,22 +141,22 @@ document.getElementById("doctor-next").addEventListener("click", () => {
 
 //Doctor
   const cards = document.querySelectorAll('.doctor-card');
-  const nextBtn = document.querySelector('.arrow-right');
-  const prevBtn = document.querySelector('.arrow-left');
-  let current = 0;
+const nextBtn = document.querySelector('#doctor-next');
+const prevBtn = document.querySelector('#doctor-prev');
+let current = 0;
 
-  function showCard(index) {
-    cards.forEach((card, i) => {
-      card.classList.toggle('active', i === index);
-    });
-  }
-
-  nextBtn.addEventListener('click', () => {
-    current = (current + 1) % cards.length;
-    showCard(current);
+function showCard(index) {
+  cards.forEach((card, i) => {
+    card.classList.toggle('active', i === index);
   });
+}
 
-  prevBtn.addEventListener('click', () => {
-    current = (current - 1 + cards.length) % cards.length;
-    showCard(current);
-  });
+nextBtn.addEventListener('click', () => {
+  current = (current + 1) % cards.length;
+  showCard(current);
+});
+
+prevBtn.addEventListener('click', () => {
+  current = (current - 1 + cards.length) % cards.length;
+  showCard(current);
+});
