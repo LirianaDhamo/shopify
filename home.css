@@ -761,7 +761,6 @@ header {
   display: flex;
   padding: 0 20px;
 }
-
 .discover-arrow {
   pointer-events: auto;
   cursor: pointer;
@@ -769,19 +768,28 @@ header {
   height: 60px;
   border: 2px solid #55AB26;
   border-radius: 50%;
-  margin-right: 10px;
-  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  user-select: none;
+  padding: 10px;
+  color: #55AB26;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.discover-arrow img {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
+.discover-arrow:hover {
+  background-color: #55AB26;
+  color: #F1E8E6;
 }
+
+.arrow-icon {
+  width: 100%;
+  height: auto;
+}
+
+.arrow-icon.rotated {
+  transform: rotate(180deg);
+}
+
 /*discover*/
 
 
