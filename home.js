@@ -142,46 +142,34 @@ prevBtn.addEventListener('click', () => {
 });
 
 //discover
-  document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.querySelector(".discover-carousel");
-    const cards = document.querySelectorAll(".discover-card");
-    const indicators = document.querySelectorAll(".discover-indicators .line");
-    const prev = document.getElementById("discover-prev");
-    const next = document.getElementById("discover-next");
+document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.querySelector(".discover-carousel");
+  const cards = document.querySelectorAll(".discover-card");
+  const prev = document.getElementById("discover-prev");
+  const next = document.getElementById("discover-next");
 
-    const cardWidth = cards[0].offsetWidth + 20;
-    let currentIndex = 0;
+  if (cards.length < 2) return;
 
-    function updateIndicators(index) {
-      indicators.forEach((dot, i) => {
-        dot.classList.toggle("active", i === index);
-      });
+  function getScrollAmount() {
+    const cardWidth = cards[0].offsetWidth;
+    const gap = cards[1].offsetLeft - cards[0].offsetLeft - cardWidth;
+    const isMobile = window.innerWidth <= 768;
+    const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
+
+    if (isMobile) {
+      return cardWidth;
+    } else if (isTablet) {
+      return (cardWidth + gap) * 2;
+    } else {
+      return cardWidth + gap;
     }
+  }
 
-    prev.addEventListener("click", () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        carousel.scrollBy({ left: -cardWidth, behavior: "smooth" });
-        updateIndicators(currentIndex);
-      }
-    });
-
-    next.addEventListener("click", () => {
-      if (currentIndex < cards.length - 1) {
-        currentIndex++;
-        carousel.scrollBy({ left: cardWidth, behavior: "smooth" });
-        updateIndicators(currentIndex);
-      }
-    });
-
-    carousel.addEventListener("scroll", () => {
-      const scrollLeft = carousel.scrollLeft;
-      const index = Math.round(scrollLeft / cardWidth);
-      if (index !== currentIndex) {
-        currentIndex = index;
-        updateIndicators(currentIndex);
-      }
-    });
-
-    updateIndicators(currentIndex);
+  next.addEventListener("click", () => {
+    carousel.scrollBy({ left: getScrollAmount(), behavior: "smooth" });
   });
+
+  prev.addEventListener("click", () => {
+    carousel.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
+  });
+});
