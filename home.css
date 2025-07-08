@@ -990,7 +990,7 @@ header {
 
 .doctor-card p {
   font-family: 'Playfair Display', serif;
-  font-size: 25px;
+  font-size: 33px;
   font-weight: 300;
   color: #238014;
   margin: 0;
@@ -1268,9 +1268,8 @@ header {
 .awards-logos p {
   font-size: 1rem;
   margin-bottom: 10px;
-  font-size: bold;
   font-family: 'Jost', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 100%;
 }
 
@@ -2166,7 +2165,7 @@ header {
 
 .start-button button {
   font-size: 100%;
-  padding: 2% 5%;
+  padding: 0% 0%;
 }
 
 .protein-kind {
@@ -2208,7 +2207,7 @@ header {
 
 .carousel-controls {
   bottom: 10%;
-  right: 50%;
+  right: 37%;
   transform: translateX(60%);
   padding-left: 50%;
   padding-bottom: 0%;
