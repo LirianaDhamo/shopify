@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
 
     if (isMobile) {
-      return cardWidth;
+      return carousel.clientWidth;  // scroll by full visible area on mobile
     } else if (isTablet) {
       return (cardWidth + gap) * 2;
     } else {
