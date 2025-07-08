@@ -147,8 +147,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const cards = document.querySelectorAll(".discover-card");
   const prev = document.getElementById("discover-prev");
   const next = document.getElementById("discover-next");
+  const indicators = document.querySelectorAll(".discover-indicators .line1");
 
   if (cards.length < 2) return;
+
+  let currentIndex = 0;
 
   function getScrollAmount() {
     const cardWidth = cards[0].offsetWidth;
@@ -157,19 +160,48 @@ document.addEventListener("DOMContentLoaded", function () {
     const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
 
     if (isMobile) {
-      return carousel.clientWidth;  // scroll by full visible area on mobile
+      return carousel.clientWidth; // full width of carousel on mobile
     } else if (isTablet) {
-      return (cardWidth + gap) * 2;
+      return (cardWidth + gap) * 2; // show 2 cards per scroll
     } else {
-      return cardWidth + gap;
+      return (cardWidth + gap) * 3; // show 3 cards per scroll
     }
   }
 
+  function getMaxIndex() {
+    const isMobile = window.innerWidth <= 768;
+    const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
+    const cardsPerView = isMobile ? 1 : isTablet ? 2 : 3;
+    return Math.ceil(cards.length / cardsPerView) - 1;
+  }
+
+  function updateIndicators(index) {
+    indicators.forEach((dot, i) => {
+      dot.classList.toggle("active", i === index);
+    });
+  }
+
   next.addEventListener("click", () => {
-    carousel.scrollBy({ left: getScrollAmount(), behavior: "smooth" });
+    const maxIndex = getMaxIndex();
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+      carousel.scrollBy({ left: getScrollAmount(), behavior: "smooth" });
+      updateIndicators(currentIndex);
+    }
   });
 
   prev.addEventListener("click", () => {
-    carousel.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
+    if (currentIndex > 0) {
+      currentIndex--;
+      carousel.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
+      updateIndicators(currentIndex);
+    }
+  });
+
+  // optional: reset indicators when window is resized
+  window.addEventListener("resize", () => {
+    currentIndex = 0;
+    updateIndicators(currentIndex);
+    carousel.scrollTo({ left: 0, behavior: "auto" });
   });
 });
