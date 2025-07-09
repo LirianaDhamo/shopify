@@ -1683,9 +1683,9 @@ header {
 
 .testimonials-text p {
   font-size: 220%;
-  width: 150%;
+  width: 100%;
   height: 40%;
-  margin: 0 0 5% 0;
+  margin: 5% 0 5% 0;
 }
 
 .testimonials-text h2 {
@@ -2056,6 +2056,7 @@ header {
     max-width: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
   }
   header {
     display: flex;
@@ -2350,13 +2351,13 @@ header {
 .testimonials {
   width: 100%;
   height: auto;
-  min-height: 400px;
+  min-height: 370px;
   padding: 0%;
   margin-top: 2%;
 }
 .testimonials-card{
   height: auto;
-  min-height: 400px;
+  min-height: 370px;
 }
 .testimonials-image {
   width: 50%;
@@ -2364,18 +2365,18 @@ header {
 .testimonials-image img {
   width: 100%;
   height: auto;
-  min-height: 400px;
+  min-height: 420px;
 }
 
 .testimonials-text {
   width: 50%;
-  padding: 1% 0% 2% 2%;
+  padding: 0% 0% 0% 2%;
 }
 
 .testimonials-text p {
   font-size: 220%;
   width: 90%;
-  height: 40%;
+  height: 27%;
   margin: 0 0 5% 0;
 }
 
@@ -2491,7 +2492,7 @@ header {
 }
 
 .circles {
-  width: 100%;
+  width: 90%;
   height: auto;
   min-height: 500px;
   display: grid;
@@ -2680,7 +2681,7 @@ h1{
 }
 .logo-grid {
   display: grid;
-  width: 100%;
+  width: 70%;
   height: auto;
   min-height: 300px;
   grid-template-columns: repeat(2, 1fr);
@@ -2697,7 +2698,7 @@ h1{
 
 .available-logo {
   width: 70%;
-  height: 30px;
+  height: 50px;
 }
 
 /*awards*/
