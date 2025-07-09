@@ -2161,12 +2161,12 @@ header {
   margin: 0 0 3% 0;
   height: 40px;
   text-align: left;
-  padding: 0;
+  padding: 0%;
 }
 
 .start-button button {
   font-size: 100%;
-  padding: 0% 0%;
+  padding: 2% 1%;
 }
 
 .protein-kind {
@@ -2269,26 +2269,29 @@ header {
 
 .cart-images {
   width: 45%;
-  height: 430px;
-  padding-top: 90px;
+  height: 400px;
+  padding-top: 67px;
   padding-right: 0px;
 }
 
 .cart-images img {
   width: 100%;
   height: auto;
+  min-height: 220px;
 }
 
 .cart-images .img1 {
-  width: 40%;
-  height: 230px;
+  width: 30%;
+  height: auto;
+  max-height: 230px;
   z-index: 9;
   top: -20px;
 }
 
 .cart-images .img2 {
-  width: 40%;
-  height: 230px;
+  width: 36%;
+  height: auto;
+  max-height: 230px;
   z-index: 30;
   top: 50px;
   transform: scale(1);
@@ -2296,8 +2299,9 @@ header {
 }
 
 .cart-images .img3 {
-  width: 40%;
-  height: 250px;
+  width: 36%;
+  height: auto;
+  max-height: 250px;
   z-index: 10;
   top: -20px;
   margin-left: -50px;
