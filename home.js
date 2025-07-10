@@ -160,11 +160,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
 
     if (isMobile) {
-      return carousel.clientWidth; // full width of carousel on mobile
+      return carousel.clientWidth;
     } else if (isTablet) {
-      return (cardWidth + gap) * 2; // show 2 cards per scroll
+      return (cardWidth + gap) * 2;
     } else {
-      return (cardWidth + gap) * 3; // show 3 cards per scroll
+      return (cardWidth + gap) * 3;
     }
   }
 
